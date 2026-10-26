@@ -1,6 +1,6 @@
 {
   "name": "@luxoticars/fonts",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The Luxoticars brand typeface as self-hostable woff2 files and an @font-face stylesheet.",
   "private": true,
   "type": "module",
