@@ -32,6 +32,21 @@ Jost is SIL OFL 1.1 (`licenses/Jost-OFL.txt`) and is a stand-in until a Futura w
 licence is bought. The CSS family name is the neutral `Luxoticars Brand`, so changing the
 files does not change any consumer. To regenerate the files: `scripts/build-jost.sh`.
 
+## Releasing
+
+Releases are driven by Changesets, as in `luxoticars-ui`. Nothing goes to npm; a release is
+a `vX.Y.Z` tag and a GitHub Release that consumers pin to.
+
+1. In any PR that changes the files or `fonts.css`, run `npx changeset` and describe the
+   change (`patch` for a fix, `minor` for a new face or file, `major` for anything that
+   breaks a consumer, such as renaming the family or a variable).
+2. Merging to `main` opens or updates a "Version Packages" PR. Merging that tags the
+   release and creates the GitHub Release.
+3. Consumers repoint to the new tag (`#vX.Y.Z`).
+
+Needs Settings, Actions, General, "Allow GitHub Actions to create and approve pull
+requests" turned on.
+
 ## Changing the font
 
 1. Replace the files (never edit one in place, consumers cache them for a year).
