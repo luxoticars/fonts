@@ -1,0 +1,38 @@
+/*
+ * The Luxoticars brand typeface.
+ *
+ * Today the files are Jost (SIL OFL), a stand-in until a Futura web licence is bought.
+ * The family name below is deliberately neutral so swapping the files never touches
+ * a consumer's CSS. Only the two variables are public API.
+ *
+ * Consumers: import this file, then preload the weights the first screen uses, e.g.
+ *   <link rel="preload" as="font" type="font/woff2" crossorigin href="…/jost-400.woff2">
+ * (`crossorigin` is required on font preloads even when the file is same-origin.)
+ */
+
+@font-face {
+  font-family: "Luxoticars Brand";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./files/jost-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Luxoticars Brand";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./files/jost-700.woff2") format("woff2");
+}
+
+/*
+ * The variables @luxoticars/ui already reads. Both name the same family: the ui sets
+ * `font-weight` itself, so the bold variable only has to resolve to a bold face.
+ * (The `futura` in the names is historical; a rename to something neutral is a
+ * separate change across ui and every app.)
+ */
+:root {
+  --font-futura: "Luxoticars Brand", system-ui, sans-serif;
+  --font-futura-bold: "Luxoticars Brand", system-ui, sans-serif;
+}
