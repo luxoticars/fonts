@@ -1,0 +1,27 @@
+{
+  "name": "@luxoticars/fonts",
+  "version": "0.0.0",
+  "description": "The Luxoticars brand typeface as self-hostable woff2 files and an @font-face stylesheet.",
+  "private": true,
+  "type": "module",
+  "style": "./src/fonts.css",
+  "scripts": {
+    "changeset": "changeset",
+    "changeset:status": "changeset status --since=origin/main",
+    "version": "changeset version && npm install --package-lock-only --ignore-scripts",
+    "release": "changeset git-tag"
+  },
+  "exports": {
+    "./fonts.css": "./src/fonts.css",
+    "./files/*": "./src/files/*"
+  },
+  "files": [
+    "src",
+    "licenses",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3"
+  },
+  "license": "OFL-1.1"
+}
